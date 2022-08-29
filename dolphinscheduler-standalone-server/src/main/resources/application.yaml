@@ -257,6 +257,6 @@ spring:
        schema-locations: classpath:sql/dolphinscheduler_mysql.sql
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/dolphinscheduler?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://rm-bp159i68n5ux3knh12o.mysql.rds.aliyuncs.com:3306/dolphinscheduler
     username: root
-    password: root
+    password: "Flzx3qc!"

@@ -555,7 +555,6 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.connector.version}</version>
-                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>com.oracle.database.jdbc</groupId>
@@ -945,12 +944,13 @@
                                 <executable>docker</executable>
                                 <workingDirectory>${project.basedir}</workingDirectory>
                                 <arguments>
+                                    <argument>buildx</argument>
                                     <argument>build</argument>
-                                    <argument>--no-cache</argument>
+                                    <argument>--platform</argument>
+                                    <argument>linux/amd64</argument>
+                                    <argument>--pull</argument>
                                     <argument>-t</argument>
                                     <argument>${docker.hub}/${docker.repo}:${docker.tag}</argument>
-                                    <argument>-t</argument>
-                                    <argument>${docker.hub}/${docker.repo}:latest</argument>
                                     <argument>${project.basedir}</argument>
                                     <argument>--file=src/main/docker/Dockerfile</argument>
                                 </arguments>
